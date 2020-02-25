@@ -14,7 +14,7 @@
 		3E68F7B023FF198C00AA1A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E68F7AF23FF198C00AA1A57 /* Assets.xcassets */; };
 		3E68F7B323FF198C00AA1A57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E68F7B123FF198C00AA1A57 /* LaunchScreen.storyboard */; };
 		3E68F7BB23FF1DF200AA1A57 /* ManageTimersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68F7BA23FF1DF200AA1A57 /* ManageTimersViewController.swift */; };
-		3E68F7BD23FF1FD800AA1A57 /* PendingNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68F7BC23FF1FD800AA1A57 /* PendingNotifications.swift */; };
+		3E68F7BD23FF1FD800AA1A57 /* PendingNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E68F7BC23FF1FD800AA1A57 /* PendingNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		3E68F7B223FF198C00AA1A57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E68F7B423FF198C00AA1A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E68F7BA23FF1DF200AA1A57 /* ManageTimersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageTimersViewController.swift; sourceTree = "<group>"; };
-		3E68F7BC23FF1FD800AA1A57 /* PendingNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotifications.swift; sourceTree = "<group>"; };
+		3E68F7BC23FF1FD800AA1A57 /* PendingNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			children = (
 				3E68F7BF23FF201D00AA1A57 /* Controllers */,
 				3E68F7BE23FF1FE700AA1A57 /* Supporting Files */,
-				3E68F7BC23FF1FD800AA1A57 /* PendingNotifications.swift */,
+				3E68F7BC23FF1FD800AA1A57 /* PendingNotification.swift */,
 				3E68F7B423FF198C00AA1A57 /* Info.plist */,
 			);
 			path = "Local-Notifications-Lab";
@@ -164,7 +164,7 @@
 				3E68F7A723FF198900AA1A57 /* AppDelegate.swift in Sources */,
 				3E68F7BB23FF1DF200AA1A57 /* ManageTimersViewController.swift in Sources */,
 				3E68F7A923FF198900AA1A57 /* SceneDelegate.swift in Sources */,
-				3E68F7BD23FF1FD800AA1A57 /* PendingNotifications.swift in Sources */,
+				3E68F7BD23FF1FD800AA1A57 /* PendingNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,27 +20,54 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-7N-mzF">
+                                <rect key="frame" x="0.0" y="247.5" width="414" height="216"/>
+                            </pickerView>
+                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1qx-qv-D6T">
+                                <rect key="frame" x="0.0" y="150" width="414" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ0-jG-rYf">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="89.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCb-T9-rnt">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="89.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90P-Dk-geS">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="89.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cs2-Vd-WEa">
-                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <rect key="frame" x="190" y="507.5" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2V9-bk-ARz"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-7N-mzF">
-                                <rect key="frame" x="0.0" y="182" width="414" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1qx-qv-D6T" firstAttribute="top" secondItem="9f4-uP-8MD" secondAttribute="bottom" constant="8" id="1K3-jh-iO9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1qx-qv-D6T" secondAttribute="trailing" id="38b-bh-hR6"/>
                             <constraint firstItem="9f4-uP-8MD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4x0-ht-WBu"/>
-                            <constraint firstItem="cs2-Vd-WEa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="HT9-pC-L3B"/>
+                            <constraint firstItem="cs2-Vd-WEa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BGu-oH-J4h"/>
                             <constraint firstItem="9f4-uP-8MD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Kge-Zn-Uk3"/>
+                            <constraint firstItem="a5W-7N-mzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VLa-7T-DL8"/>
+                            <constraint firstItem="a5W-7N-mzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aeR-dJ-6Gd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9f4-uP-8MD" secondAttribute="trailing" constant="20" id="e2r-0i-8si"/>
-                            <constraint firstItem="a5W-7N-mzF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ftD-Az-1G9"/>
-                            <constraint firstItem="a5W-7N-mzF" firstAttribute="top" secondItem="9f4-uP-8MD" secondAttribute="bottom" constant="40" id="iBr-zE-nHS"/>
-                            <constraint firstItem="cs2-Vd-WEa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sNe-3z-dIk"/>
-                            <constraint firstItem="a5W-7N-mzF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sfs-Xk-Y9H"/>
+                            <constraint firstItem="1qx-qv-D6T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ffY-6K-yyc"/>
+                            <constraint firstItem="1qx-qv-D6T" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="i1K-Iq-7r1"/>
+                            <constraint firstItem="a5W-7N-mzF" firstAttribute="top" secondItem="1qx-qv-D6T" secondAttribute="bottom" constant="8" id="udd-3M-sFq"/>
+                            <constraint firstItem="cs2-Vd-WEa" firstAttribute="top" secondItem="a5W-7N-mzF" secondAttribute="bottom" constant="44" id="xRl-j2-jaG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -75,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timerCell" textLabel="F7d-df-KYi" style="IBUITableViewCellStyleDefault" id="e7e-6D-OFN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timerCell" textLabel="F7d-df-KYi" detailTextLabel="Neo-m2-mFo" style="IBUITableViewCellStyleValue1" id="e7e-6D-OFN">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7e-6D-OFN" id="9V9-rV-ikg">
@@ -83,7 +110,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F7d-df-KYi">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="44"/>
+                                                    <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Neo-m2-mFo">
+                                                    <rect key="frame" x="350" y="12" width="44" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -99,6 +133,9 @@
                         <viewLayoutGuide key="safeArea" id="e4w-qs-Srb"/>
                     </view>
                     <navigationItem key="navigationItem" id="c2j-IE-US4"/>
+                    <connections>
+                        <outlet property="notifTableView" destination="OBN-bC-JiX" id="vBa-3m-YbU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez2-Ys-AGJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

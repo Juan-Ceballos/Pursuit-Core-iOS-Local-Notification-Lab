@@ -21,7 +21,7 @@ class SetTimerViewController: UIViewController {
     @IBOutlet weak var notificationTextField: UITextField!
     
     private let center = UNUserNotificationCenter.current()
-
+    
     private let hoursData = Array(0...24)
     private let minsData = Array(0...59)
     private let secsData = Array(0...59)
@@ -31,6 +31,8 @@ class SetTimerViewController: UIViewController {
     private var pickerViewMiddleSecs: Int?
     
     private var timeInterval: TimeInterval = Date().timeIntervalSinceNow
+    
+    weak var notifDelegate: SetTimerNotificationDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,8 +98,30 @@ class SetTimerViewController: UIViewController {
     }
     
     private func createLocationNotification()   {
+        
+        //        var timeToDate: String    {
+        //            let date = Date(timeIntervalSince1970: TimeInterval(time))
+        //            let dateFormatter = DateFormatter()
+        //            dateFormatter.timeStyle = DateFormatter.Style.medium
+        //            dateFormatter.dateStyle = DateFormatter.Style.medium
+        //            dateFormatter.timeZone = .current
+        //            dateFormatter.dateFormat = "EEEE, MMM d"//EEEE, MMM d, yyyy, hh:mm a"
+        //            let localDate = dateFormatter.string(from: date)
+        //            return localDate
+        //        }
+        
+        let date = Date() + (Date().timeIntervalSinceNow + Double(timeConverter().0) + Double(timeConverter().1) + Double(timeConverter().2))
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.medium
+        dateFormatter.dateStyle = DateFormatter.Style.none
+        dateFormatter.timeZone = .current
+        dateFormatter.dateFormat = "hh:mm:ss a"
+        let localDate = dateFormatter.string(from: date)
+        
+        
         let content = UNMutableNotificationContent()
         content.title = notificationTextField.text ?? "No Title"
+        content.body = "\(localDate)"
         content.sound = .default
         
         let identifier = UUID().uuidString
@@ -146,6 +170,7 @@ extension SetTimerViewController: UIPickerViewDelegate  {
             return 0
         }
     }
+    
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         valueForRows(component: component, row: row).description
